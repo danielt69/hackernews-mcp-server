@@ -1,0 +1,50 @@
+{
+  "name": "hackernews-mcp-server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server for the Hacker News API — built with the official TypeScript SDK.",
+  "type": "module",
+  "author": "Daniel Tsionit",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielt69/hackernews-mcp-server.git"
+  },
+  "homepage": "https://github.com/danielt69/hackernews-mcp-server#readme",
+  "bugs": {
+    "url": "https://github.com/danielt69/hackernews-mcp-server/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hacker-news",
+    "hackernews",
+    "llm",
+    "ai",
+    "claude",
+    "mcp-server"
+  ],
+  "bin": {
+    "hackernews-mcp-server": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
